@@ -1,0 +1,103 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<History>
+
+@{
+    ViewData["Title"] = "History";
+}
+<h1>@ViewData["Title"]</h1>
+
+<style>
+    table {
+        border: 1px solid black;
+        border-radius: 10px;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    tbody {
+        border-radius: 10px;
+    }
+
+    th {
+        text-align: center;
+        background-color: lightgray;
+        color: black;
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+        th p,
+        td p {
+            margin-bottom: 0;
+        }
+
+    tr td:first-child {
+        border-right: 1px solid black
+    }
+
+    td {
+        padding: 15px;
+        background-color: #708090;
+        color: white;
+    }
+</style>
+
+<div class="cards">
+    @foreach (var history in Model)
+    {
+        <div class="card2">
+
+            <h1>@history.thuisploeg - @history.uitploeg</h1>
+            <div class="logokader">
+                <img src="@history.thuislogo["fields"]["file"]["url"]" class="logo" />
+            </div>
+            <div class="logokader logokaders">
+                <img src="@history.uitlogo["fields"]["file"]["url"]" class="logo" />
+            </div>
+            <button type="button" class="btn btnn" data-bs-toggle="modal" data-bs-target="#@history.wedstrijdnummers">
+                Bekijk timeline
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="@history.wedstrijdnummers" tabindex="-1" aria-labelledby="@history.uitploeg" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="@history.uitploeg">Timeline - Wedstrijdinformatie</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>@history.thuisploeg - @history.uitploeg</h3>
+                            <div class="logos">
+                                <img src="@history.thuislogo["fields"]["file"]["url"]" class="logoo" />
+                                <p> VS </p>
+                                <img src="@history.uitlogo["fields"]["file"]["url"]" class="logoo" />
+                            </div>
+                            <contentful-rich-text document="@history.wedstrijd"></contentful-rich-text>
+                            <h3>Wedstrijdbeoordeling</h3>
+                            <p class="score1">Telkens een score op 5 over wat ik vond van de onderstaande onderwerpen.</p>
+                            <div class="flexy">
+                                <div class="row">
+                                    <h5>Spelers</h5>
+                                    <p class="score">@history.spelers / 5</p>
+                                </div>
+                                <div class="row">
+                                    <h5>Staff</h5>
+                                    <p class="score">@history.staff / 5</p>
+                                </div>
+                                <div class="row">
+                                    <h5>Publiek</h5>
+                                    <p class="score">@history.publiek / 5</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    }
+</div>

@@ -1,0 +1,359 @@
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+
+/* ************************ CARDS ***************************** */
+.card {
+    width: 500px;
+    background-color: slategray;
+    height: 550px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: none;
+    color: whitesmoke;
+}
+
+    .card img {
+        max-height: 300px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .card h1 {
+        text-align: center;
+        background-color: rgb(255, 255, 255, 0.7);
+        font-size: 35px;
+        color: dimgray;
+        padding: 8px;
+        border-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .card:first-child h1 {
+        display: block;
+        top: -305px;
+        position: relative;
+    }
+
+    .card:nth-child(2n+2) h1 {
+        display: block;
+        top: -305px;
+        position: relative;
+    }
+
+    .card:nth-child(2n+3) h1 {
+        display: block;
+        top: -305px;
+        position: relative;
+    }
+
+    .card:nth-child(2n+4) h1 {
+        display: block;
+        top: -285px;
+        position: relative;
+    }
+
+    .card:nth-child(2n+5) h1 {
+        display: block;
+        top: -300px;
+        position: relative;
+    }
+
+    .card:last-child h1 {
+        display: block;
+        top: -305px;
+        position: relative;
+    }
+
+    .card .start {
+        display: none;
+    }
+
+    .card .wedstrijd {
+        text-align: center;
+        font-size: 21px;
+        margin-top: -30px;
+    }
+
+    .card .assistenten {
+        text-align: center;
+        font-size: 16px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: lightgray;
+    }
+
+    .card .btnn {
+        padding: 10px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: -15px;
+        position: relative;
+        color: white;
+        background: cornflowerblue;
+        border: 2px solid dimgrey;
+        border-radius: 15px
+    }
+
+.truitje {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-body .route {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.truitjes,
+.stand {
+    display: flex;
+    justify-content: space-around;
+    vertical-align: central;
+}
+
+    .truitjes p {
+        padding-top: 60px;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+.modal-body h3 {
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 15px
+}
+
+.stand h3:first-child {
+    padding: 15px;
+    padding-right: 60px;
+}
+
+.stand h3:last-child {
+    padding: 15px;
+}
+
+.modal-content {
+    color: dimgray
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/***********************CARDS HISTORY*******************/
+
+.card2 {
+    width: 500px;
+    background-color: slategray;
+    height: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+    .card2 h1 {
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+        padding-top: 20px;
+    }
+
+
+    .card2 .btnn {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        width: 300px;
+        color: white;
+        background: #559b17;
+        border: 2px solid dimgrey;
+        border-radius: 15px;
+        margin-left: 100px;
+    }
+
+.logokader {
+    margin-top: 20px;
+    background-color: white;
+    margin-left: 65px;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 20px
+}
+
+.card2:last-child .logokaders .logo:last-child {
+    max-width: 60px;
+    margin: 26px;
+    margin-left: 45px;
+    height: auto;
+}
+
+.logo {
+    max-width: 100px;
+    margin: 26px;
+    height: auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+.card2 .logokader {
+    margin-bottom: 50px;
+}
+
+.logoo {
+    max-width: 150px;
+    height: auto;
+}
+
+.logos {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    vertical-align: central;
+}
+
+    .logos p {
+        padding-top: 60px;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+.card2:last-child .logoo {
+    max-width: 150px;
+    height: 150px;
+}
+
+.card2 .modal-body h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.card2 .modal-body h5 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.card2 .modal-body p {
+    text-align: center;
+}
+
+
+
+.score {
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: #708090;
+    font-weight: 600;
+}
+
+.score1 {
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.flexy {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    vertical-align: central;
+    flex-direction: row;
+}
+
+.row p {
+    width: 100%;
+    text-align: center;
+}
+
+.row h5 {
+    margin-left: auto;
+    margin-right: auto;
+}

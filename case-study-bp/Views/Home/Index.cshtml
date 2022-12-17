@@ -1,0 +1,71 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<VoetbalWedstrijd>
+
+@{
+    ViewData["Title"] = "Wedstrijden";
+}
+
+<h1>Wedstrijden</h1>
+<div class="cards">
+    @foreach (var wedstrijd in Model)
+    {
+        <div class="card">
+
+            <img src="@wedstrijd.speelveldFoto["fields"]["file"]["url"]" />
+            <h1>@wedstrijd.matchbeschrijving</h1>
+            <h3 class="start">@wedstrijd.starttijdwedstrijd</h3>
+            <h3 class="wedstrijd">@wedstrijd.Thuisploeg - @wedstrijd.Uitploeg</h3>
+            <h3 class="assistenten">@wedstrijd.Assistenten</h3>
+            <button type="button" class="btn btnn" data-bs-toggle="modal" data-bs-target="#@wedstrijd.wedstrijdnummers">
+                Meer wedstrijdinformatie
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="@wedstrijd.wedstrijdnummers" tabindex="-1" aria-labelledby="@wedstrijd.Uitploeg" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="@wedstrijd.Uitploeg">Meer info over @wedstrijd.matchbeschrijving.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>@wedstrijd.Thuisploeg - @wedstrijd.Uitploeg</h3>
+                            <div class="truitjes">
+                                <img src="@wedstrijd.Truitjethuisploeg["fields"]["file"]["url"]" class="truitje" />
+                                <p> VS </p>
+                                <img src="@wedstrijd.Truitjeuitploeg["fields"]["file"]["url"]" class="truitje" />
+                            </div>
+                            <div class="stand">
+                                <h3>@wedstrijd.Standthuisploeg</h3>
+                                <h3>@wedstrijd.Standuitploeg</h3>
+                            </div>
+                            <h3>Route</h3>
+                            <img src="@wedstrijd.route["fields"]["file"]["url"]" class="route" />
+
+                            <div class="text-center pt-5">
+                                <h3>Assistenten</h3>
+                                @if (wedstrijd.Blokken1 != 0)
+                                {
+                                    <p>
+                                        Assistent 1 heeft @wedstrijd.Blokken1 blokken
+                                        <br> Assistent 2 heeft @wedstrijd.Blokken2 blokken
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p>
+                                        Er zijn geen assistenten aangeduid
+                                    </p>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    }
+</div>
